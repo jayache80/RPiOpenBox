@@ -1,5 +1,5 @@
 <!-- This is just a diff file showing the changes I made to the default lxde-pi-rc.xml file. 
-     Copy the lxde-pi-rc.xml this repository to $HOME/.config/openbox/  -->
+     Copy the lxde-pi-rc.xml in this repository to $HOME/.config/openbox/  -->
  
 <!-- run openbox hyphen hyphen reconfigure to update these settings without a rebooting -->
  
