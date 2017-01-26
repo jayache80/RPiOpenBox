@@ -1,5 +1,5 @@
 # RPiOpenBox
-'''bash
+'''sh
 mv $HOME/.config/openbox/lxde-pi-rc.xml $HOME/.config/openbox/lxde-pi-rc.old
 cp lxde-pi-rc.xml $HOME/.config/openbox/
 '''
