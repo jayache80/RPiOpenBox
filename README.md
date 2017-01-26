@@ -1,5 +1,7 @@
 # RPiOpenBox
 
+This is a better OpenBox configuration (OpenBox is the default window manager that comes with LXDE desktop environment, as used by Raspbian, Lubuntu, etc.)
+
     mv $HOME/.config/openbox/lxde-pi-rc.xml $HOME/.config/openbox/lxde-pi-rc.old
     cp lxde-pi-rc.xml $HOME/.config/openbox/
 
