@@ -1,0 +1,186 @@
+2,6c2,3
+ 
+<!-- Copy this file to $HOME/.config/openbox/  -->
+ 
+<!-- run openbox hyphen hyphen reconfigure to update these settings without a rebooting -->
+ 
+     <!-- Take a screenshot of the current window with scrot when Ctrl+Alt+Print are pressed -->
+     <keybind key="C-S-A-P">
+       <action name="Execute">
+         <command>lxsession-default screenshot window</command>
+       </action>
+     </keybind>
+ 
+ 
+  <!-- Left Super Key + Up Arrow to toggle Maximize --> 
+  <keybind key="W-Up">
+       <action name="ToggleMaximize"/>
+     </keybind>
+     
+ 
+  <!-- Left Super Key + Left Arrow to snap left --> 
+ <keybind key="W-Left">
+       <action name="UnmaximizeFull"/>
+       <action name="MoveResizeTo"><x>0</x><y>0</y><height>100%</height><width>50%</width></action>
+     </keybind>
+ 
+ 
+  <!-- Left Super Key + Right Arrow to snap right --> 
+     <keybind key="W-Right">
+       <action name="UnmaximizeFull"/>
+       <action name="MoveResizeTo"><x>-0</x><y>0</y><height>100%</height><width>50%</width></action>
+     </keybind>
+ 
+<!-- can't have Left Super key do the start menu at the same time 
+      as all the Super+UpArrow, Super+Right, aka the 'W' modifier key, 
+      so, leaving the Left Super key alone, let the Right Super open
+      the start menu
+ 
+     <keybind key="Super_L">
+       <action name="Execute">
+         <command>lxpanelctl menu</command>
+       </action>
+     </keybind>
+ -->    
+     <keybind key="Super_R">
+       <action name="Execute">
+         <command>lxpanelctl menu</command>
+       </action>
+     </keybind>
+ 
+     <!-- Ctrl + Shift + x to open shutdown menu -->
+     <keybind key="C-S-x">
+       <action name="Execute">
+         <command>lxsession-logout</command>
+       </action>
+     </keybind>
+ 
+
+    <!-- Launch Task Manager with Ctrl+Shift+Esc -->
+
+     <keybind key="C-S-Escape">
+       <action name="Execute">
+         <command>lxtask</command>
+       </action>
+     </keybind>
+
+
+ 
+<!-- useless "change desktops" mouse commands 
+
+       <mousebind button="A-Up" action="Click">
+         <action name="DesktopPrevious"/>
+       </mousebind>
+       <mousebind button="A-Down" action="Click">
+         <action name="DesktopNext"/>
+       </mousebind>
+       <mousebind button="C-A-Up" action="Click">
+         <action name="DesktopPrevious"/>
+       </mousebind>
+       <mousebind button="C-A-Down" action="Click">
+         <action name="DesktopNext"/>
+       </mousebind>
+       <mousebind button="A-S-Up" action="Click">
+         <action name="SendToDesktopPrevious"/>
+       </mousebind>
+       <mousebind button="A-S-Down" action="Click">
+         <action name="SendToDesktopNext"/>
+       </mousebind>
+
+ -->
+ 
+   
+ <!-- useless middle button and 'move to bottom' mouse functions
+
+     <mousebind button="Middle" action="Press">
+         <action name="Lower"/>
+         <action name="FocusToBottom"/>
+         <action name="Unfocus"/>
+       </mousebind>
+       <mousebind button="Up" action="Click">
+         <action name="Shade"/>
+         <action name="FocusToBottom"/>
+         <action name="Unfocus"/>
+         <action name="Lower"/>
+       </mousebind>
+       <mousebind button="Down" action="Click">
+         <action name="Unshade"/>
+         <action name="Raise"/>
+       </mousebind>
+
+-->
+
+
+
+ <!-- useless middle button to unfocus a window, who would want that?
+
+      <mousebind button="Middle" action="Press">
+         <action name="Lower"/>
+         <action name="FocusToBottom"/>
+         <action name="Unfocus"/>
+       </mousebind>
+
+ -->
+
+ 
+<!-- useless mouse functions that irradically switch desktops while scrolling what the hell??
+
+      <mousebind button="Up" action="Click">
+        <action name="DesktopPrevious"/>
+      </mousebind>
+      <mousebind button="Down" action="Click">
+        <action name="DesktopNext"/>
+      </mousebind>
+      <mousebind button="A-Up" action="Click">
+        <action name="DesktopPrevious"/>
+      </mousebind>
+      <mousebind button="A-Down" action="Click">
+        <action name="DesktopNext"/>
+      </mousebind>
+      <mousebind button="C-A-Up" action="Click">
+        <action name="DesktopPrevious"/>
+      </mousebind>
+      <mousebind button="C-A-Down" action="Click">
+        <action name="DesktopNext"/>
+      </mousebind>
+
+ -->
+ 
+ 
+ 
+ <!-- useless mouse functions that screw with the desktops again, god, so many
+ 
+       <mousebind button="Up" action="Click">
+        <action name="DesktopPrevious"/>
+      </mousebind>
+      <mousebind button="Down" action="Click">
+        <action name="DesktopNext"/>
+      </mousebind>
+      <mousebind button="A-Up" action="Click">
+        <action name="DesktopPrevious"/>
+      </mousebind>
+      <mousebind button="A-Down" action="Click">
+        <action name="DesktopNext"/>
+      </mousebind>
+
+
+-->
+
+ <!-- this makes sure terminal and task manager open up focused, 
+      otherwise they may open up behind other windows 
+      which is so stupid
+      also, make sure task manager opens up a normal size,
+      not tiny or huge
+ -->
+
+  <application name="x-terminal-emulator">
+       <focus>yes</focus>
+     </application>
+     <application name="lxtask">
+       <focus>yes</focus>
+       <position>
+         <x>center</x>
+         <y>center</y>
+       </position>
+     </application>
+ 
